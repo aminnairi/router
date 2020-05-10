@@ -1,0 +1,41 @@
+{
+    "name": "@aminnairi/router",
+    "version": "0.0.0",
+    "description": "History router",
+    "homepage": "https://github.com/aminnairi/router",
+    "main": "release/commonjs/router.cjs",
+    "module": "release/module/router.mjs",
+    "browser": "release/browser/router.js",
+    "license": "WTFPL",
+    "files": [
+        "release"
+    ],
+    "bugs": {
+        "url": "https://github.com/aminnairi/router/issues/"
+    },
+    "author": {
+        "name": "Amin NAIRI",
+        "url": "https://github.com/aminnairi/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aminnairi/router.git"
+    },
+    "scripts": {
+        "eslint:fix": "eslint --fix sources/**/*.mjs tests/**/*.mjs",
+        "eslint": "eslint sources/**/*.mjs tests/**/*.mjs",
+        "test": "jest",
+        "release": "rollup --config rollup.config.js"
+    },
+    "devDependencies": {
+        "@aminnairi/eslint-config": "aminnairi/eslint-config",
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "babel-jest": "^26.0.1",
+        "eslint": "^7.0.0",
+        "jest": "^26.0.1",
+        "rollup": "^2.8.2",
+        "rollup-plugin-delete": "^1.2.0",
+        "rollup-plugin-terser": "^5.3.0"
+    }
+}

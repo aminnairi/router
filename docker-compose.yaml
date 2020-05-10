@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    yarn:
+        image: node:latest
+        user: node
+        tty: true
+        working_dir: /home/node
+        entrypoint: yarn
+        volumes:
+            - .:/home/node
