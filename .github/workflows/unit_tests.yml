@@ -1,0 +1,28 @@
+name: Unit Tests
+
+on:
+    push:
+        branches:
+            - latest
+            - next
+
+    pull_request:
+        branches:
+            - latest
+            - next
+
+jobs:
+    unit_tests:
+        name: Unit tests
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout the project
+              uses: actions/checkout@v2
+
+            - name: Installing the Node.js dependencies
+              run: docker-compose run --user root --rm yarn
+
+            - name: Run Jest for unit tests
+              run: docker-compose run --user root --rm yarn test

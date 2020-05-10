@@ -23,6 +23,8 @@ module.exports = {
             "error",
             "unix"
         ],
+        "no-nested-ternary": "off",
+        "no-ternary": "off",
         "quotes": [
             "error",
             "double"

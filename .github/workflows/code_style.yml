@@ -1,0 +1,28 @@
+name: Code Style
+
+on:
+    push:
+        branches:
+            - latest
+            - next
+
+    pull_request:
+        branches:
+            - latest
+            - next
+
+jobs:
+    code_style_checks:
+        name: Code style checks
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout the project
+              uses: actions/checkout@v2
+
+            - name: Installing the Node.js dependencies
+              run: docker-compose run --user root --rm yarn
+
+            - name: Run ESLint to check the code style
+              run: docker-compose run --user root --rm yarn lint
