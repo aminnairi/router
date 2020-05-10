@@ -23,5 +23,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Unit tests
+            - name: Checkout the project
+              uses: actions/checkout@v2
+
+            - name: Run Jest for unit tests
               run: sudo docker-compose run --rm yarn test
