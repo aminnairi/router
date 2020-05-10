@@ -19,7 +19,7 @@ Router.start();
 ### ECMAScript Modules
 
 ```console
-$ curl -o router.mjs https://github.com/aminnairi/router/blob/next/release/module/router.mjs
+$ curl -o router.mjs https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs
 ```
 
 ```javascript
