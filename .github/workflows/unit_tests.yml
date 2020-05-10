@@ -11,10 +11,6 @@ on:
             - latest
             - next
 
-defaults:
-      run:
-        working-directory: $GITHUB_WORKSPACE
-
 jobs:
     unit_tests:
         name: Unit tests
@@ -25,14 +21,8 @@ jobs:
             - name: Checkout the project
               uses: actions/checkout@v2
 
-            - name: List all files
-              run: ls -alh
-
-            - name: Check if Docker Compose is installed
-              run: which docker-compose
-
             - name: Installing the Node.js dependencies
-              run: sudo docker-compose run --rm yarn
+              run: docker-compose run --user root --rm yarn
 
             - name: Run Jest for unit tests
-              run: sudo docker-compose run --rm yarn test
+              run: docker-compose run --user root --rm yarn test
