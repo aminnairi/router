@@ -19,7 +19,7 @@ Router.start();
 ### ECMAScript Modules
 
 ```console
-$ curl -o router.mjs https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs
+$ curl -o router.mjs https://raw.githubusercontent.com/aminnairi/router/latest/release/module/router.mjs
 $ touch index.js
 ```
 
@@ -41,7 +41,7 @@ const {Router} = require("@aminnairi/router");
 Or
 
 ```console
-$ curl -o router.cjs https://raw.githubusercontent.com/aminnairi/router/per-module-types-installation-instructions/release/commonjs/router.cjs
+$ curl -o router.cjs https://raw.githubusercontent.com/aminnairi/router/latest/release/commonjs/router.cjs
 $ touch index.js
 ```
 
@@ -56,13 +56,13 @@ $ touch mod.js
 ```
 
 ```javascript
-import {Router} from "https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs";
+import {Router} from "https://raw.githubusercontent.com/aminnairi/router/latest/release/module/router.mjs";
 ```
 
 ### Browser
 
 ```console
-$ curl -o router.js https://raw.githubusercontent.com/aminnairi/router/next/release/browser/router.js
+$ curl -o router.js https://raw.githubusercontent.com/aminnairi/router/latest/release/browser/router.js
 $ touch index.html
 ```
 
