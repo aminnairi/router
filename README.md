@@ -42,8 +42,6 @@ on(pattern: string, callback: (parameters?: {[key: string]: string}) => void): v
 ```
 
 ```javascript
-import {Router} from "./Router.mjs";
-
 Router.on("/users", () => {
     console.log("List of all users");
 });
@@ -89,8 +87,6 @@ onPageNotFound(callback: () => void): void;
 ```
 
 ```javascript
-import {Router} from "./Router.mjs";
-
 Router.onPageNotFound(() => {
     console.log("Page not found");
 });
@@ -105,8 +101,6 @@ start(): void;
 ```
 
 ```javascript
-import {Router} from "./Router.mjs";
-
 Router.start();
 ```
 
@@ -119,7 +113,5 @@ goToPage(page: string): void;
 ```
 
 ```javascript
-import {Router} from "./Router.mjs";
-
 Router.goToPage("/");
 ```
