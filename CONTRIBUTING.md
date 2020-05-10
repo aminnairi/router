@@ -2,9 +2,9 @@
 
 ## Requirements
 
-- Git
-- Docker
-- Docker Compose
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## Fork the project
 
