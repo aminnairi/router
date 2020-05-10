@@ -16,17 +16,68 @@ Router.start();
 
 ## :arrow_down: Installation
 
-### Manual
+### ECMAScript Modules
 
-Copy and paste the content of:
-- `release/module/router.mjs` if you use ECMAScript Modules (Browser & Deno)
-- `release/commonjs/router.cjs` if you use CommonJS (Node.js)
-- `release/browser/router.js` if you use the browser
+```console
+$ curl -o router.mjs https://raw.githubusercontent.com/aminnairi/router/latest/release/module/router.mjs
+$ touch index.js
+```
 
-### Node.js
+```javascript
+import {Router} from "./router.mjs";
+```
+
+### CommonJS
 
 ```console
 $ npm install aminnairi/router
+$ touch index.js
+```
+
+```javascript
+const {Router} = require("@aminnairi/router");
+```
+
+Or
+
+```console
+$ curl -o router.cjs https://raw.githubusercontent.com/aminnairi/router/latest/release/commonjs/router.cjs
+$ touch index.js
+```
+
+```javascript
+const {Router} = require("./router.cjs");
+```
+
+### Deno
+
+```console
+$ touch mod.js
+```
+
+```javascript
+import {Router} from "https://raw.githubusercontent.com/aminnairi/router/latest/release/module/router.mjs";
+```
+
+### Browser
+
+```console
+$ curl -o router.js https://raw.githubusercontent.com/aminnairi/router/latest/release/browser/router.js
+$ touch index.html
+```
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="./router.js"></script>
+        <script>
+            "use strict";
+
+            const {Router} = window.Router;
+        </script>
+    </body>
+</html>
 ```
 
 ## :nerd_face: API
