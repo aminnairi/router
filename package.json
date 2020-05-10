@@ -25,6 +25,7 @@
         "lint:fix": "eslint --fix sources/**/*.mjs tests/**/*.mjs jest.config.js rollup.config.js babel.config.js .eslintrc.js",
         "lint": "eslint sources/**/*.mjs tests/**/*.mjs jest.config.js rollup.config.js babel.config.js .eslintrc.js",
         "test": "jest",
+        "coverage": "coveralls < coverage/lcov.info",
         "release": "rollup --config rollup.config.js"
     },
     "devDependencies": {
@@ -32,6 +33,7 @@
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
         "babel-jest": "^26.0.1",
+        "coveralls": "^3.1.0",
         "eslint": "^7.0.0",
         "jest": "^26.0.1",
         "rollup": "^2.8.2",

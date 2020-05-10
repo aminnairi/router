@@ -50,6 +50,14 @@ $ docker-compose run --rm yarn lint
 $ docker-compose run --rm yarn test
 ```
 
+## Coverage
+
+```console
+$ touch .coveralls.yml
+$ echo "repo_token: $COVERALLS_REPO_TOKEN" > .coveralls.yml
+$ docker-compose run --rm yarn coverage
+```
+
 ## Release
 
 ```console
