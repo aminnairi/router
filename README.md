@@ -2,6 +2,8 @@
 
 History router.
 
+[![Unit Tests](https://github.com/aminnairi/router/workflows/Unit%20Tests/badge.svg)](https://github.com/aminnairi/router/actions?query=workflow%3A%22Unit+Tests%22) [![Code Style](https://github.com/aminnairi/router/workflows/Code%20Style/badge.svg)](https://github.com/aminnairi/router/actions?query=workflow%3A%22Code+Style%22) [![Release Check](https://github.com/aminnairi/router/workflows/Release%20Check/badge.svg)](https://github.com/aminnairi/router/actions?query=workflow%3A%22Release+Check%22)
+
 ## :thinking: Usage
 
 ```javascript
