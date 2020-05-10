@@ -11,6 +11,10 @@ on:
             - latest
             - next
 
+defaults:
+      run:
+        working-directory: $GITHUB_WORKSPACE
+
 jobs:
     unit_tests:
         name: Unit tests
