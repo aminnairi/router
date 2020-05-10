@@ -22,7 +22,7 @@
         "url": "https://github.com/aminnairi/router.git"
     },
     "scripts": {
-        "lint:fix": "eslint --fix sources/**/*.mjs tests/**/*.mjs",
+        "lint:fix": "eslint --fix sources/**/*.mjs tests/**/*.mjs jest.config.js rollup.config.js babel.config.js",
         "lint": "eslint sources/**/*.mjs tests/**/*.mjs",
         "test": "jest",
         "release": "rollup --config rollup.config.js"
