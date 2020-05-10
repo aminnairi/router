@@ -35,13 +35,13 @@ Until the issue you choose is resolved.
 ## Code style fix
 
 ```console
-$ docker-compose run --rm yarn eslint:fix
+$ docker-compose run --rm yarn lint:fix
 ```
 
 ## Code style check
 
 ```console
-$ docker-compose run --rm yarn eslint
+$ docker-compose run --rm yarn lint
 ```
 
 ## Test
