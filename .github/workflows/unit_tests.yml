@@ -24,4 +24,4 @@ jobs:
 
         steps:
             - name: Unit tests
-              run: docker-compose run --rm yarn test
+              run: sudo docker-compose run --rm yarn test
