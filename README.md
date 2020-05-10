@@ -20,6 +20,7 @@ Router.start();
 
 ```console
 $ curl -o router.mjs https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs
+$ touch index.js
 ```
 
 ```javascript
@@ -30,13 +31,29 @@ import {Router} from "./router.mjs";
 
 ```console
 $ npm install aminnairi/router
+$ touch index.js
 ```
 
 ```javascript
 const {Router} = require("@aminnairi/router");
 ```
 
+Or
+
+```console
+$ curl -o router.cjs https://raw.githubusercontent.com/aminnairi/router/per-module-types-installation-instructions/release/commonjs/router.cjs
+$ touch index.js
+```
+
+```javascript
+const {Router} = require("./router.cjs");
+```
+
 ### Deno
+
+```console
+$ touch mod.js
+```
 
 ```javascript
 import {Router} from "https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs";
