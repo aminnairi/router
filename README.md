@@ -29,7 +29,7 @@ Copy and paste the content of:
 $ npm install aminnairi/router
 ```
 
-## :nerd: API
+## :nerd_face: API
 
 ### Router
 
