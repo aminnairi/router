@@ -27,5 +27,8 @@ jobs:
             - name: Check if Docker Compose is installed
               run: which docker-compose
 
+            - name: Installing the Node.js dependencies
+              run: sudo docker-compose run --rm yarn
+
             - name: Run Jest for unit tests
               run: sudo docker-compose run --rm yarn test
