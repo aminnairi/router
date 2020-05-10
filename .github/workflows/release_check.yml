@@ -1,0 +1,28 @@
+name: Release Check
+
+on:
+    push:
+        branches:
+            - latest
+            - next
+
+    pull_request:
+        branches:
+            - latest
+            - next
+
+jobs:
+    release_check:
+        name: Check if the project can be released
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout the project
+              uses: actions/checkout@v2
+
+            - name: Installing the Node.js dependencies
+              run: docker-compose run --user root --rm yarn
+
+            - name: Check if the project can be Released
+              run: docker-compose run --user root --rm yarn release
