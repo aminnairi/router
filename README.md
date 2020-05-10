@@ -16,17 +16,51 @@ Router.start();
 
 ## :arrow_down: Installation
 
-### Manual
+### ECMAScript Modules
 
-Copy and paste the content of:
-- `release/module/router.mjs` if you use ECMAScript Modules (Browser & Deno)
-- `release/commonjs/router.cjs` if you use CommonJS (Node.js)
-- `release/browser/router.js` if you use the browser
+```console
+$ curl -o router.mjs https://github.com/aminnairi/router/blob/next/release/module/router.mjs
+```
 
-### Node.js
+```javascript
+import {Router} from "./router.mjs";
+```
+
+### CommonJS
 
 ```console
 $ npm install aminnairi/router
+```
+
+```javascript
+const {Router} = require("@aminnairi/router");
+```
+
+### Deno
+
+```javascript
+import {Router} from "https://raw.githubusercontent.com/aminnairi/router/next/release/module/router.mjs";
+```
+
+### Browser
+
+```console
+$ curl -o router.js https://raw.githubusercontent.com/aminnairi/router/next/release/browser/router.js
+$ touch index.html
+```
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="./router.js"></script>
+        <script>
+            "use strict";
+
+            const {Router} = window.Router;
+        </script>
+    </body>
+</html>
 ```
 
 ## :nerd_face: API
