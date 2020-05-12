@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.2
+
+- :memo: explicit error when not running the file within a web browser ([#19](https://github.com/aminnairi/router/pull/19)) 
+- :bug: fixed the browser name clashing in the documentation ([#18](https://github.com/aminnairi/router/pull/18)) 
+
 ## 0.0.1
 
 - Added GitHub Actions [#8](https://github.com/aminnairi/router/pull/8)
