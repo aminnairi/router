@@ -43,8 +43,6 @@ $ touch index.js
 ```javascript
 const {Router} = require("@aminnairi/router");
 
-const {Router} = require("./router.cjs");
-
 Router.on("/", () => {
     console.log("Home page");
 });
