@@ -1,6 +1,6 @@
 {
     "name": "@aminnairi/router",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "History router",
     "homepage": "https://github.com/aminnairi/router",
     "main": "release/commonjs/router.cjs",
