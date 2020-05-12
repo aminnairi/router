@@ -25,6 +25,12 @@ $ touch index.js
 
 ```javascript
 import {Router} from "./router.mjs";
+
+Router.on("/", () => {
+    console.log("Home page");
+});
+
+Router.start();
 ```
 
 ### CommonJS
@@ -36,6 +42,12 @@ $ touch index.js
 
 ```javascript
 const {Router} = require("@aminnairi/router");
+
+Router.on("/", () => {
+    console.log("Home page");
+});
+
+Router.start();
 ```
 
 Or
@@ -47,6 +59,12 @@ $ touch index.js
 
 ```javascript
 const {Router} = require("./router.cjs");
+
+Router.on("/", () => {
+    console.log("Home page");
+});
+
+Router.start();
 ```
 
 ### Deno
@@ -57,6 +75,12 @@ $ touch mod.js
 
 ```javascript
 import {Router} from "https://raw.githubusercontent.com/aminnairi/router/latest/release/module/router.mjs";
+
+Router.on("/", () => {
+    console.log("Home page");
+});
+
+Router.start();
 ```
 
 ### Browser
@@ -74,7 +98,13 @@ $ touch index.html
         <script>
             "use strict";
 
-            const {Router} = window.Router;
+            const {Router: BrowserRouter} = window.Router;
+
+            BrowserRouter.on("/", () => {
+                console.log("Home page");
+            });
+
+            BrowserRouter.start();
         </script>
     </body>
 </html>
