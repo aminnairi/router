@@ -30,6 +30,9 @@ export class Router extends Singleton {
      * Singleton pattern and therefore any instance is handled automatically
      * when calling the inherited getInstance method.
      *
+     * @throws {Error} If the file is not run withing a web server.
+     * @throws {ReferenceError} If the History API is not supported by the browser.
+     *
      * @return {this} A new instance.
      *
      * @example
@@ -37,6 +40,14 @@ export class Router extends Singleton {
      */
     constructor() {
         super();
+
+        if ("file:" === window.location.protocol) {
+            throw new Error("Cannot use the History API without a web server.");
+        }
+
+        if (!window.history) {
+            throw new ReferenceError("This browser does not support the History API.");
+        }
 
         /**
          * @var {object[]} routes All routes registered for this instance.
@@ -136,7 +147,8 @@ export class Router extends Singleton {
      *
      * @throws {Error} If the method is called with more or less than one argument.
      * @throws {TypeError} If the first argument is not a string.
-     * @throws {Error} If the History API is not supported by the browser.
+     * @throws {Error} If the file is not run within a web server.
+     * @throws {ReferenceError} If the History API is not supported by the browser.
      *
      * @return {void}
      *
@@ -150,6 +162,10 @@ export class Router extends Singleton {
 
         if ("string" !== typeof page) {
             throw new TypeError("First argument is not a string.");
+        }
+
+        if ("file:" === window.location.protocol) {
+            throw new Error("Cannot use the History API without a web server.");
         }
 
         if (!window.history) {
